@@ -1,14 +1,11 @@
-class Conta {
-    var titular = ""
-    var numero = 0
+class Conta(var titular: String, var numero: Int) {
     private var saldo = 0.0
 
-    fun depositar(valor: Double) {
-        saldo += valor
-    }
 
-    fun mostrarSaldo(): Double {
-        return saldo
+    fun depositar(valor: Double) {
+        if (valor > 0) {
+            saldo += valor
+        }
     }
 
     fun retirar(valor: Double) {
@@ -20,7 +17,25 @@ class Conta {
         }
     }
 
+    fun transfere(valor: Double, destino: Conta): Boolean {
+        return if (validarSaldo(valor)) {
+            retirar(valor)
+            destino.depositar(valor)
+            true
+        } else {
+            false
+        }
+    }
+
     private fun podeRetirar(valor: Double): Boolean {
         return (saldo - valor) > 0
+    }
+
+    private fun validarSaldo(valor: Double): Boolean {
+        return saldo >= valor;
+    }
+
+    fun getSaldo(): Double {
+        return saldo;
     }
 }
