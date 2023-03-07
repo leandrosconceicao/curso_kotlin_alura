@@ -1,4 +1,4 @@
-class Conta(var titular: String, var numero: Int) {
+class Conta(var titular: String, val numero: Int) {
     private var saldo = 0.0
 
 
