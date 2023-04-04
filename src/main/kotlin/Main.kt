@@ -1,11 +1,5 @@
 fun main() {
-    val conta = Conta(titular="Leandro", numero = 9999)
-    conta.depositar(100.0)
-    println(conta.getSaldo())
-    conta.depositar(100.0)
-    println(conta.getSaldo())
-    conta.retirar(50.0)
-    conta.retirar(50.0)
-    conta.retirar(50.0)
-    conta.retirar(50.0)
+    val dir = Diretor(name =  "", cpf = "", salario = 0.0, senha = 1234, plr = 1)
+
+    dir.autentica(1234)
 }

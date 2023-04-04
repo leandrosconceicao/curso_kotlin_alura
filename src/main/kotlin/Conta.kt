@@ -1,4 +1,4 @@
-class Conta(var titular: String, val numero: Int) {
+open class Conta(var titular: String, val numero: Int) {
     private var saldo = 0.0
 
 
@@ -8,7 +8,7 @@ class Conta(var titular: String, val numero: Int) {
         }
     }
 
-    fun retirar(valor: Double) {
+    open fun retirar(valor: Double) {
         if (podeRetirar(valor)) {
             saldo -= valor
             println("Seu saldo é de ${saldo}")
