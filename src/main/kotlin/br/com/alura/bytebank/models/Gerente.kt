@@ -1,3 +1,5 @@
+package br.com.alura.bytebank.models
+
 class Gerente(
     name: String,
     cpf: String,

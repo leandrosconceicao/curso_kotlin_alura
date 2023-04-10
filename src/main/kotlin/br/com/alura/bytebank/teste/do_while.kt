@@ -1,3 +1,5 @@
+package br.com.alura.bytebank.teste
+
 fun doWhile(to: Int) {
     var test = true
     var count = 0

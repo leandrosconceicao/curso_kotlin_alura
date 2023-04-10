@@ -1,3 +1,5 @@
+package br.com.alura.bytebank.models
+
 class SistemaInterno {
     fun entra(admin: Autenticavel, senha: Int) {
         if (admin.autentica(senha)) {

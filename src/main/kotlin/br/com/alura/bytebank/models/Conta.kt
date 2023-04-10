@@ -1,3 +1,5 @@
+package br.com.alura.bytebank.models
+
 open class Conta(var titular: String, val numero: Int) {
     private var saldo = 0.0
 
